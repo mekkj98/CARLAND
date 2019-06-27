@@ -1,0 +1,838 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    color: #525c65;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #3b3838;
+}
+
+input,
+textarea,
+select,
+button {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button:hover,
+button:focus {
+    outline: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #746f6f;
+    transition: all 0.5s ease-in-out;
+}
+
+a:hover {
+    color: #3b3838;
+    text-decoration: underline;
+}
+
+header,
+footer,
+nav,
+main,
+section {
+    display: block;
+    overflow: hidden;
+}
+
+.container {
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    width: 1100px;
+}
+
+@media (max-width: 1120px) {
+    .container {
+        display: block;
+        width: 98%;
+        margin: auto;
+        padding: 0 2%;
+    }
+}
+
+/** <!-- @HEADER --> */
+.header {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;
+}
+
+.header .cover-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.header .cover-container img {
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    align-self: center;
+}
+
+@media (max-width: 700px) {
+    .header .cover-container img {
+        transform: scale(1.3);
+        margin-top: 13vw;
+    }
+}
+
+.header .header-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.header nav {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    padding: 20px 0;
+    z-index: 100;
+    width: 1200px;
+    margin: auto;
+}
+
+.header nav .nav-left {
+    width: 30%;
+}
+
+.header nav .nav-left .nav-logo {
+    display: inline-flex;
+    align-items: center;
+    background-image: linear-gradient(-180deg, #ff8d3d, #ff5969 97%);
+    border-radius: 10px;
+    height: 46px;
+    width: 46px;
+    cursor: default;
+}
+
+.header nav .nav-left .nav-logo img,
+.header nav .nav-left .nav-logo h3 {
+    display: inline-flex;
+}
+
+.header nav .nav-left .nav-logo h3 {
+    font-size: 25px;
+    margin: 0px 0px 0px 13px;
+}
+
+.header nav .nav-left .nav-logo h3 sup {
+    font-size: 13px;
+    letter-spacing: 0.6px;
+    color: #ff5969;
+}
+
+.header nav .nav-left .nav-logo img {
+    margin: 9.5px;
+    width: 27px;
+}
+
+
+.header nav .nav-right {
+    width: 70%;
+    text-align: right;
+    position: relative;
+}
+
+.header nav .nav-right a.nav-right-toggler {
+    cursor: pointer;
+    display: none;
+}
+
+.header nav .nav-right ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.header nav .nav-right ul li {
+    display: inline-block;
+}
+
+.header nav .nav-right ul li a {
+    display: block;
+    padding: 10px;
+    margin: 0 20px 0 0;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+.header nav .nav-right ul li a.hire-btn {
+    letter-spacing: 0.4px;
+    background-image: linear-gradient(-133deg, #ff8d3d, #ff5969);
+    box-shadow: 0 3px 6px 0 rgba(255, 89, 105, .3);
+    border: 0;
+    color: #fff;
+    padding: 13px 35px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.header nav .nav-right ul li a.hire-btn:hover {
+    text-decoration: none;
+    box-shadow: -2px 9px 12px 2px rgba(0, 0, 0, .15);
+}
+
+
+@media (max-width:1200px) {
+
+    .header nav .nav-right a.nav-right-toggler {
+        display: inline-block;
+        font-size: 20px;
+        padding: 5px 10px;
+        margin-right: 20px;
+        margin-top: 6px;
+    }
+
+    .header nav .nav-right ul {
+        padding: 20px;
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 95%;
+        background: #fff;
+        z-index: 10000;
+    }
+
+    .header nav .nav-right ul li {
+        display: block;
+        text-align: left;
+    }
+
+    .header nav .nav-right ul li a {
+        display: inline-block;
+        margin: 10px auto;
+    }
+
+}
+
+@media (max-width:1200px) {
+    .header nav {
+        max-width: 95%;
+        margin: auto;
+    }
+}
+
+.header .header-cover {
+    position: absolute;
+    padding: 10px 0;
+    top: 75%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header .header-cover .header-cover-text {
+    display: block;
+    width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.header .header-cover .header-cover-text p {
+    display: none;
+}
+
+@media (max-width:1200px) {
+    .header .header-cover .header-cover-text {
+        max-width: 95%;
+        margin: auto;
+    }
+
+    .header .header-cover .header-cover-text p {
+        display: block;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .header .header-cover {
+        top: 60%;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .header .header-cover {
+        top: 50%;
+    }
+}
+
+
+.header .header-cover a {
+    display: inline-block;
+    letter-spacing: 0.4px;
+    background-image: linear-gradient(-133deg, #ff8d3d, #ff5969);
+    box-shadow: 0 3px 6px 0 rgba(255, 89, 105, .3);
+    color: #fff;
+    padding: 13px 35px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.header .header-cover a:hover {
+    text-decoration: none;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, .15);
+}
+
+/** <!-- @END-HEADER --> */
+
+/** @SECTION1 */
+
+.main {
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 30px 0;
+
+}
+
+.section1 {
+    text-align: center;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    padding: 30px 0;
+}
+
+.section1 .section1-top {
+    display: block;
+    max-width: 500px;
+    margin: auto;
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+.section1 .section1-top h1 {
+    color: #ccc;
+    font-size: 130px;
+    line-height: 1;
+    margin: 15px 0;
+    font-weight: 300;
+}
+
+.section1 .section1-bottom {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.section1 .section1-cover {
+    position: relative;
+    width: 762px;
+    height: 762px;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+}
+
+@media (max-width: 765px) {
+    .section1 .section1-cover {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 405px) {
+    .section1 .section1-cover {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.section1 .section1-cover img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.section1 .section1-left h3 {
+    line-height: 1;
+    margin: 10px 0;
+}
+
+.section1 .section1-left {
+    top: 35%;
+    left: 8%;
+    position: absolute;
+    max-width: 250px;
+    line-height: 1.7;
+}
+
+
+.section1 .section1-right h3 {
+    line-height: 1;
+    margin: 10px 0;
+}
+
+.section1 .section1-right {
+    top: 45%;
+    right: 4%;
+    position: absolute;
+    max-width: 250px;
+    text-align: left;
+    line-height: 1.7;
+}
+
+@media (max-width: 1000px) {
+
+    .section1 .section1-right,
+    .section1 .section1-left {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 100px auto;
+        max-width: 600px;
+        text-align: center;
+    }
+
+}
+
+/** @SECTION2 */
+
+.section2 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.section2 .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.section2 .section2-left {
+    width: 40%;
+}
+
+.section2 .section2-left h1 {
+    color: #ccc;
+    font-size: 130px;
+    line-height: 1;
+    margin: 15px 0;
+    font-weight: 300;
+}
+
+.section2 .section2-left p {
+    line-height: 2;
+}
+
+.section2 .section2-left h3 {
+    font-size: 25px;
+}
+
+.section2 .section2-right {
+    width: 60%;
+    display: block;
+    overflow: hidden;
+}
+
+.section2 .section2-right .section2-cover {
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 360px;
+    height: 350px;
+}
+
+.section2 .section2-right .section2-cover img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width: 1000px) {
+    .section2 {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .section2 .container {
+        display: block;
+        max-width: 800px;
+    }
+
+    .section2 .section2-left,
+    .section2 .section2-right {
+        width: 100%;
+    }
+}
+
+/** @SECTION3 */
+.section3 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.section3 .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.section3 .section3-right {
+    width: 50%;
+    text-align: left;
+}
+
+.section3 .section3-right h1 {
+    color: #ccc;
+    font-size: 130px;
+    line-height: 1;
+    margin: 15px 0;
+    font-weight: 300;
+}
+
+.section3 .section3-right p {
+    line-height: 2;
+}
+
+.section3 .section3-right h3 {
+    font-size: 25px;
+}
+
+.section3 .section3-left {
+    width: 50%;
+    display: block;
+    overflow: hidden;
+}
+
+.section3 .section3-left .section3-cover {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 360px;
+    height: 360px;
+}
+
+.section3 .section3-left .section3-cover img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1000px) {
+    .section3 {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .section3 .container {
+        display: block;
+        max-width: 800px;
+    }
+
+    .section3 .section3-left,
+    .section3 .section3-right {
+        width: 100%;
+    }
+}
+
+/** @SECTION4 */
+.section4 {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    background: #f9fdfd;
+}
+
+.section4 .cards {
+    vertical-align: center;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.section4 .cards .card {
+    width: 12%;
+    display: block;
+    margin: 30px auto;
+}
+
+
+
+.section4 .cards .card .heading {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+}
+
+.section4 .cards .card .heading img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@media (max-width: 1000px) {
+    .section4 {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .section4 .cards .card {
+        width: 18%;
+    }
+}
+
+
+@media (max-width: 690px) {
+    .section4 .cards .card {
+        width: 30%;
+    }
+}
+
+@media (max-width: 390px) {
+    .section4 .cards .card {
+        width: 48%;
+    }
+}
+
+.section4 .cards .card .text {
+    text-align: center;
+}
+
+/** @SECTION5 */
+.section5 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section5 .container {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.section5 .section5-left {
+    width: 40%;
+    display: block;
+    overflow: hidden;
+}
+
+.section5 .section5-left p {
+    line-height: 2;
+}
+
+.section5 .section5-left h1 {
+    color: #ccc;
+    font-size: 130px;
+    line-height: 1;
+    margin: 15px 0;
+    font-weight: 300;
+}
+
+.section5 .section5-left h3 {
+    font-size: 25px;
+}
+
+.section5 .section5-right {
+    width: 60%;
+    display: block;
+    overflow: hidden;
+}
+
+.section5 .section5-right .section5-cover {
+    display: block;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    width: 350px;
+    height: 460px;
+}
+
+.section5 .section5-right .section5-cover img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.section5-buttons {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.section5-buttons a {
+    display: inline-block;
+    height: 30px;
+    width: 100px;
+    overflow: hidden;
+    position: relative;
+    margin: 30px 5px;
+}
+
+.section5-buttons a img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1000px) {
+    .section5 {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .section5 .container {
+        display: block;
+        max-width: 800px;
+    }
+
+    .section5 .section5-left,
+    .section5 .section5-right {
+        width: 100%;
+    }
+}
+
+/** @CONTACT */
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: #f9fdfd;
+    text-align: center;
+}
+
+.contact h1 {
+    color: #ccc;
+    font-size: 130px;
+    line-height: 1;
+    margin: 15px 0;
+    font-weight: 300;
+}
+
+@media (max-width: 1000px) {
+    .contact h1 {
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 400px) {
+    .contact h1 {
+        font-size: 50px;
+    }
+}
+
+.contact h3 {
+    font-size: 25px;
+    margin: 1.5em auto;
+}
+
+.contact a.contact-btn {
+    display: inline-block;
+    margin: 30px 0 30px 0;
+    letter-spacing: 0.4px;
+    background-image: linear-gradient(-133deg, #ff8d3d, #ff5969);
+    box-shadow: 0 3px 6px 0 rgba(255, 89, 105, .3);
+    border: 0;
+    color: #fff;
+    padding: 13px 35px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.contact a.contact-btn:hover {
+    text-decoration: none;
+    box-shadow: -2px 9px 12px 2px rgba(0, 0, 0, .15);
+}
