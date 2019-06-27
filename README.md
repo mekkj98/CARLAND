@@ -1,4 +1,4 @@
-# LaraTalk
+# CARLAND
 A Modern Landing page for car application.
 
 ![alt text](./assets/images/app/app.png)
@@ -10,4 +10,4 @@ A Modern Landing page for car application.
 # Technology that are used in this projects
 * HTML
 * CSS
-* JS
+* JS (JavaScript)
