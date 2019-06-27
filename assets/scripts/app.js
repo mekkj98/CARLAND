@@ -9,11 +9,28 @@ window.onload = function () {
             menu.style.display = "none";
         }
     }
-}
+};
 
 window.onscroll = function () {
     if (window.scrollY > 100) {
         var menu = document.getElementById("navToggler").nextElementSibling;
         if (menu.className == "active-now") menu.style.display = "none";
+    }
+};
+
+window.onresize = function () {
+
+    var navBtn = document.getElementById("navToggler");
+    var menu = navBtn.nextElementSibling;
+    if (window.innerWidth > 1200) {
+        if (menu.style.display == "none") {
+            menu.style.display = "block";
+            navBtn.style.display = "none";
+        }
+    } else {
+        if (menu.style.display == "block" || menu.style.display == "") {
+            menu.style.display = "none";
+            navBtn.style.display = "inline-block";
+        }
     }
 }
